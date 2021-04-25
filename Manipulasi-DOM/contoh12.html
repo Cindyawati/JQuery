@@ -1,0 +1,44 @@
+<!--Contoh hide
+Sebagai contoh kita akan tambahkan sebuah tombol hide untuk menyembunyikan Bandung dari list.
+
+Pertama kita harus tambahkan kode untuk membuat tombol di dalam elemen list Bandung .
+
+<button id="hideBandung">H</button>
+Selanjutnya tambahkan kode jQuery untuk memberikan efekhide.
+
+$('#hideBandung').on('click', function()
+{
+    $('.bandung').hide();
+});
+Sehingga kode lengkapnya menjadi seperti di bawah ini :
+
+-->
+
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li class="bandung">
+        Bandung
+        <button id="keBandung">Pergi</button>
+        <button id="hideBandung">H</button>
+        <button id="hapusBandung">X</button>
+
+    </li>
+    <li class="jakarta">Jakarta</li>
+    <li class="surabaya">Surabaya</li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+    $('#keBandung').on('click', function(){
+    alert('Saya mau ke Bandung');
+    });
+    $('#hapusBandung').on('click', function(){
+        $('.bandung').remove();
+        alert('Bandung dihapus');
+    });
+    $('#hideBandung').on('click', function(){
+        $('.bandung').hide();
+    });
+});
+</script>

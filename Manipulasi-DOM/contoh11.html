@@ -1,0 +1,23 @@
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li class="bandung">
+        Bandung
+        <button id="keBandung">Pergi</button>
+        <button id="hapusBandung">X</button>
+    </li>
+    <li class="jakarta">Jakarta</li>
+    <li class="surabaya">Surabaya</li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+    $('#keBandung').on('click', function(){
+    alert('Saya mau ke Bandung');
+    });
+    $('#hapusBandung').on('click', function(){
+        $('.bandung').remove();
+        alert('Bandung dihapus');
+    });
+});
+</script>

@@ -1,0 +1,27 @@
+<!--SET
+.text(konten)
+Mengatur konten teks dari elemen yang dipilih.
+
+.html(konten)
+Mengatur konten elemen yang dipilih (markup HTML).
+
+.val(konten)
+Menetapkan atau mengembalikan value pada form.
+-->
+
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li class="bandung">Bandung</li>
+    <li class="surabaya"><strong>Surabaya</strong></li>
+    <li>Jakarta</li>
+    <li><input type="text" class="inputan" value="Malang"></li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+    $('.bandung').text('Cimahi');
+    $('.surabaya').html('<em>Surabaya</em>');
+    $('.inputan').val('Semarang');
+});
+</script>

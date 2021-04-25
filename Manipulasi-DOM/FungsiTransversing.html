@@ -1,0 +1,133 @@
+<!--
+
+    Menggunakan fungsi Traversing
+    Digunakan untuk menjelajah DOM dengan menggunakan fungsi-fungi berikut ini :
+
+    .first()
+
+    Memilih elemen pertama dari elemen yang dipilih
+
+    .last()
+
+    Memilih elemen terakhir dari elemen yang dipilih
+
+    .prev()
+
+    Memilih elemen sebelumnya dari elemen yang dipilih
+
+    .next()
+
+    Memilih elemen berikutnya dari elemen yang dipilih
+
+    .children()
+
+    Memilih elemen anak dari elemen yang dipilih
+
+    .find()
+
+    Memilih elemen anak dan juga elemen-elemen di bawahnya dari elemen yang dipilih
+
+    .parent()
+
+    Memilih elemen parent dari elemen yang dipilih
+
+    Contoh :
+    $("li").first().next().prev().last();
+
+    Add Before (.before(<elemen>))
+        Digunakan untuk menyisipkan konten tertentu sebelum elemen yang dipilih.
+    $(document).ready(function(){
+    var price = $('<p>From $399.99</p>');    
+    $('.vacation').before(price);
+    });
+
+    Add After (.after(<element>))
+        Digunakan untuk menyisipkan konten tertentu setelah elemen yang dipilih.
+    $(document).ready(function(){
+    var price = $('<p>From $399.99</p>');    
+    $('.vacation').after(price);
+    });
+
+    .append(<elemen>)
+        Digunakan untuk menyisipkan konten tertentu di dalam elemen yang dipilih dan diletakkan di bagian akhir.
+    $(document).ready(function(){
+    var price = $('<p>From $399.99</p>');    
+    $('.vacation').append(price);
+    });
+
+    .prepend(<elemen>)
+        Digunakan untuk menyisipkan konten tertentu di dalam elemen yang dipilih dan diletakkan di awal.
+    $(document).ready(function(){
+    var price = $('<p>From $399.99</p>');    
+    $('.vacation').prepend(price);
+    });
+
+    Alternatif
+
+    .insertBefore(<elemen>)
+Fungsinya sama seperti before, digunakan untuk menyisipkan konten / elemen HTML sebelum elemen yang dipilih.
+price.insertBefore($('.vacation'));
+
+.insertAfter(<elemen>)
+    Fungsinya sama seperti after, digunakan untuk menyisipkan konten / elemen HTML setelah elemen yang dipilih.
+
+price.insertAfter($('.vacation'));
+
+.prependTo(<elemen>)
+Fungsinya sama seperti prepend, digunakan untuk menyisipkan elemen HTML di awal elemen yang dipilih.
+
+price.prependTo($('.vacation'));
+.appendTo(<elemen>)
+Fungsinya sama seperti append, digunakan untuk menyisipkan elemen HTML di akhir elemen yang dipilih.
+
+price.appendTo($('.vacation'));
+-->
+
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li>Bandung</li>
+    <li>Jakarta</li>
+    <li>Surabaya</li>
+    <li>Malang</li>
+
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+    var jogja=$('<li>Yogyakarta</li>');
+    var bali=$('<li>Bali</li>');
+    var subjudul=$('<h2>Pilih Tujuan Anda</h2>');
+    var penutup=$('<h3>Terima Kasih</h3>');
+    $('.lokasi').prepend(jogja);
+    $('.lokasi').append(bali);
+    $('.lokasi').before(subjudul);
+    $('.lokasi').after(penutup);
+});
+</script>
+
+<!--
+
+    <h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li>Bandung</li>
+    <li>Jakarta</li>
+    <li>Surabaya</li>
+    <li>Malang</li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+    var jogja=$('<li>Yogyakarta</li>');
+    var bali=$('<li>Bali</li>');
+    var subjudul=$('<h2>Pilih Tujuan Anda</h2>');
+    var penutup=$('<h3>Terima Kasih</h3>');
+    jogja.prependTo($('.lokasi'));
+    bali.appendto($('.lokasi'));    
+    subjudul.insertBefore($('.lokasi'));    
+    penutup.insertAfter($('.lokasi'));
+});
+</script>
+
+-->

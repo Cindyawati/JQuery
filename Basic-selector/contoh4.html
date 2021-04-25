@@ -1,0 +1,21 @@
+<!--id Selector-->
+
+<h1>Where do want to go?</h1>
+<h2>Travel Destinations</h2>
+<p>Plan your next adventure</p>
+<ul id="destinations">
+    <li>Rome</li>
+    <li>Paris</li>
+    <li class='promo'>Rio</li>
+</ul>
+<button>Aksi</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+  $("button").click(function()
+  {
+    $("#destinations").text("Rome, Paris or Rio?");
+  });
+});
+</script>

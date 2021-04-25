@@ -1,0 +1,217 @@
+<!--Beberapa Fitur Effect yang disediakan
+addClass(namaclass)
+Digunakan untuk menambahkan satu atau lebih class ke elemen yang dipilih
+
+removeClass(namaclass)
+Digunakan untuk menghapus satu atau lebih class dari elemen yang dipilih
+
+toggleClass(namaclass)
+Beralih antara menambahkan atau menghapus class dari elemen yang dipilih.
+
+css(css dalam bentuk objek)
+Menetapkan atau mengembalikan atribut style.-->
+
+<!-- Ubah Tulisan Bandung jadi Merah-->
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+
+        <style>
+        .merah
+        {
+        color: red;
+        }
+        .biru
+        {
+        color: blue;
+        }
+        </style>
+    </head>
+
+    <body>
+        <h1>Kemana Anda ingin pergi ?</h1>
+        <ul class="lokasi">
+            <li class="bandung">Bandung</li>
+            <li class="surabaya">Surabaya</li>
+            <li class="jakarta">Jakarta</li>
+        </ul>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function()
+        {
+            $('.bandung').addClass('merah');    
+        });
+        </script>
+    </body>
+</html>
+-->
+
+
+<!-- Ganti Jadi Biru-->
+<!--
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Page Title</title>
+
+            <style>
+            .merah
+            {
+            color: red;
+            }
+            .biru
+            {
+            color: blue;
+            }
+            </style>
+        </head>
+
+        <body>
+        <h1>Kemana Anda ingin pergi ?</h1>
+        <ul class="lokasi">
+            <li class="bandung">Bandung</li>
+            <li class="surabaya">Surabaya</li>
+            <li class="jakarta">Jakarta</li>
+        </ul>
+        <button id="gantiBiru">Jadi biru!</button>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script>
+        $(document).ready(function()
+        {          
+            $('.bandung').addClass('merah');    
+            $('#gantiBiru').on('click',function(){
+                $('.bandung').addClass('biru');
+            }); 
+        });
+        </script>
+    </body>
+</html>
+-->
+
+<!-- Kode Lengkap Ubah Merah Biru -->
+<!--
+    <!DOCTYPE html>
+    <html>
+        <head>
+
+        <title>Page Title</title>
+        <style>
+        .merah
+        {
+        color: red;
+        }
+        .biru
+        {
+        color: blue;
+        }
+        </style>
+        </head>
+
+        <body>
+            <h1>Kemana Anda ingin pergi ?</h1>
+            <ul class="lokasi">
+                <li class="bandung">Bandung</li>
+                <li class="surabaya">Surabaya</li>
+                <li class="jakarta">Jakarta</li>
+
+            </ul>
+            <button id="gantiBiru">Jadi biru!</button>
+            <button id="gantiMerah">Jadi merah!</button>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+
+            $(document).ready(function()
+            {   
+            $('.bandung').addClass('merah');    
+            $('#gantiBiru').on('click',function()
+            {
+            $('.bandung').removeClass('merah');
+            $('.bandung').addClass('biru');
+            });  
+            $('#gantiMerah').on('click',function()
+            {
+            $('.bandung').removeClass('biru');
+            $('.bandung').addClass('merah');
+            }); 
+            });
+            </script>
+    </body>
+    </html>
+    -->
+
+    <!-- 
+        Kita bisa menambahkan class lain lagi sesuai dengan kebutuhan kita, misalnya mengubah class bandung menjadi besar.
+
+        Kita tinggal tambahkan sebuah tombol lagi.
+
+        <button id="gantiBesar">Jadi besar!</button>
+        Kemudian menambahkan kode pada jQuery sebagai respon.
+
+        $('#gantiBesar').on('click',function()
+        {
+        $('.bandung').css(fontSize:100});
+        }); 
+        Ketika kita klik tombol tersebut maka class bandung menjadi besar.
+    -->
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+
+        <title>Page Title</title>
+        <style>
+        .merah
+        {
+        color: red;
+        }
+        .biru
+        {
+        color: blue;
+        }
+        </style>
+        </head>
+
+        <body>
+            <h1>Kemana Anda ingin pergi ?</h1>
+            <ul class="lokasi">
+                <li class="bandung">Bandung</li>
+                <li class="surabaya">Surabaya</li>
+                <li class="jakarta">Jakarta</li>
+
+            </ul>
+            <button id="gantiBiru">Jadi biru!</button>
+            <button id="gantiMerah">Jadi merah!</button>
+            <button id="gantiBesar">Jadi besar!</button>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+
+            $(document).ready(function()
+            {   
+                $('.bandung').addClass('merah');
+                 
+                $('#gantiBiru').on('click',function()
+                {
+                    $('.bandung').removeClass('merah');
+                    $('.bandung').addClass('biru');
+                }); 
+
+                $('#gantiMerah').on('click',function()
+                {
+                    $('.bandung').removeClass('biru');
+                    $('.bandung').addClass('merah');
+                });
+
+                $('#gantiBesar').on('click',function()
+                {
+                    $('.bandung').css({fontSize : 100});
+                });
+
+            });
+            </script>
+    </body>
+    </html>

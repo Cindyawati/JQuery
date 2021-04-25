@@ -1,0 +1,112 @@
+<!--Contoh fadeOut
+Untuk menyembunyikan Bandung dari daftar disertai dengan efek transisi (menyembunyikan secara perlahan), kita bisa menggunakan fadeOut.
+
+$('#hideBandung').on('click', function()
+{
+    $('.bandung').fadeOut();
+});
+Untuk mengatur kecepatan dari efek transisi, kita bisa menambahkan jumlah kecepatan (dengan satuan mili second) seperti di bawah ini :
+
+$('#hideBandung').on('click', function()
+{
+    $('.bandung').fadeOut(2000);
+});
+Contoh slideUp
+Untuk menyembunyikan Bandung dari daftar dengan efek slide ke atas, kita bisa menggunakan slideUp seperti berikut ini.
+
+$('#hideBandung').on('click', function()
+{
+    $('.bandung').slideUp(2000);
+});
+-->
+
+<!--Contoh toggle
+Contoh lain untuk menyembunyikan dan juga memunculkan suatu elemen kita bisa menggunakan toggle.
+
+Misalnya kita hendak membuat tombol untuk menyembunyikan dan memunculkan kembali Bandung dari daftar.
+
+Langkah pertama adalah membuat tombol Toggle Bandung letakkan diluar elemen list seperti berikut ini :
+
+
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li class="bandung">
+        Bandung
+        <button id="keBandung">Pergi</button>
+        <button id="hideBandung">H</button>
+        <button id="hapusBandung">X</button>
+    </li>
+    <li class="jakarta">Jakarta</li>
+    <li class="surabaya">Surabaya</li>
+</ul>
+<button id="toggleButton">Toggle Bandung</button>
+
+Untuk memberikan respon terhadap tombol Toggle Bandung, kita tambahkan script jQuery.
+
+$('#toggleButton').on('click', function(){
+    $('.bandung').toggle();
+});
+Sehingga kode lengkapnya menjadi seperti di bawah ini.
+
+-->
+
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li class="bandung">
+        Bandung
+        <button id="keBandung">Pergi</button>
+        <button id="hideBandung">H</button>
+        <button id="hapusBandung">X</button>
+    </li>
+    <li class="jakarta">Jakarta</li>
+    <li class="surabaya">Surabaya</li>
+</ul>
+<button id="toggleButton">Toggle Bandung</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+    $('#keBandung').on('click', function(){
+    alert('Saya mau ke Bandung');
+    });
+    $('#hapusBandung').on('click', function(){
+        $('.bandung').remove();
+        alert('Bandung dihapus');
+    });
+    $('#hideBandung').on('click', function(){
+        $('.bandung').hide();
+    });
+    $('#toggleButton').on('click', function(){
+        $('.bandung').toggle();
+    });
+});
+</script>
+
+<!-- 
+    
+    Contoh Syntax lain untuk Toogle 
+
+    Contoh fadeToggle
+    Untuk memberikan efek transisi kita bisa mengubahnya menjadi fadeToggle.
+
+    $('#toggleButton').on('click', function(){
+        $('.bandung').fadeToggle();
+    });
+
+    Contoh slideToggle
+    Untuk memberikan efek slide ke atas (untuk menyembunyikan) dan ke bawah (untuk menampilkan) kita juga bisa mengubahnya menjadi slideToggle.
+
+    $('#toggleButton').on('click', function(){
+        $('.bandung').slideToggle();
+    });
+    
+    Contoh animate
+    Selain itu kita juga bisa memberikan efek animasi dengan mengubahnya menjadi animate.
+
+    $('#toggleButton').on('click', function(){
+        $('.bandung').animate({
+            marginLeft:100
+        });
+    });
+
+-->

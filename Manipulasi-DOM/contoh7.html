@@ -1,0 +1,61 @@
+<!--GET
+Digunakan untuk mengambil data elemen di jQuery.-->
+
+<!-- .text 
+Mengembalikan konten teks dari elemen yang dipilih. Metode ini mengembalikan semua elemen yang cocok dan menghapus markup HTML.
+
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li>Bandung</li>
+    <li class="surabaya">Surabaya</li>
+    <li>Jakarta</li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function()
+{
+console.log($('.surabaya').text());
+
+});
+</script>
+-->
+
+<!-- .html
+Mengembalikan konten elemen yang dipilih (termasuk markup HTML). 
+
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li>Bandung</li>
+    <li class="surabaya"><strong>Surabaya</strong></li>
+    <li>Jakarta</li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+console.log($('.surabaya').html());
+});
+</script>
+-->
+
+<!--.val
+Mengembalikan value pada form.
+
+<h1>Kemana Anda ingin pergi ?</h1>
+<ul class="lokasi">
+    <li>Bandung</li>
+    <li class="surabaya"><strong>Surabaya</strong></li>
+    <li>Jakarta</li>
+    <li><input type="text" class="inputan" value="Malang"></li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        console.log($('.inputan').val());
+    });
+</script>
+
+-->
